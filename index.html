@@ -1,1 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kith. bostanlı</title>
+    
+    <link rel="stylesheet" href="https://use.typekit.net/vfh3aol.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#cb2622',
+                        brandBeige: '#ffe6bb',
+                        richBlack: '#0a0a0a'
+                    },
+                    fontFamily: {
+                        termina: ['termina', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #ffe6bb;
+            background-image: radial-gradient(rgba(10, 10, 10, 0.15) 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+            font-family: 'termina', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Solid backgrounds for readability over the grid, sharp borders */
+        .solid-block {
+            background-color: #ffe6bb;
+            border: 4px solid #0a0a0a;
+        }
+
+        .category-block {
+            background-color: #ffe6bb;
+        }
+
+        /* Dotted leader for prices */
+        .leader {
+            border-bottom: 3px dotted #0a0a0a;
+            flex-grow: 1;
+            margin: 0 12px;
+            position: relative;
+            top: -6px; /* Align with baseline */
+        }
+
+        /* Hide scrollbar for clean sticky header if needed */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffe6bb;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0a0a0a;
+        }
+    </style>
+</head>
+<body class="text-richBlack selection:bg-brandRed selection:text-brandBeige flex flex-col min-h-screen">
+
+    <header class="w-full pt-24 md:pt-32 pb-6 px-6 sm:px-10 md:px-12">
+        <div class="w-full max-w-7xl mx-auto flex justify-center">
+            <div class="flex flex-col items-start">
+                <h1 class="text-brandRed font-black lowercase tracking-normal leading-[0.85] m-0 p-0" style="font-size: clamp(3rem, 26vw, 14rem);">
+                    kith.
+                </h1>
+                <h2 class="text-brandRed font-bold lowercase tracking-normal mt-0 text-left" style="font-size: clamp(1rem, 5.5vw, 2.75rem);">
+                    your daily routine.
+                </h2>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full max-w-7xl mx-auto px-6 sm:px-10 md:px-12 py-12 flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14">
+            
+            <section class="category-block flex flex-col h-full p-4 sm:p-5">
+                <div class="border-b-4 border-richBlack pb-3 mb-6">
+                    <h3 class="text-brandRed text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight leading-none">Sıcak İçecekler</h3>
+                </div>
+                
+                <div class="flex flex-col gap-5 flex-grow">
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Espresso</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">150 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Americano</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">180 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Flat White</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">200 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Latte</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">220 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Filtre Kahve</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">170 TL</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="category-block flex flex-col h-full p-4 sm:p-5">
+                <div class="border-b-4 border-richBlack pb-3 mb-6">
+                    <h3 class="text-brandRed text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight leading-none">Soğuk İçecekler</h3>
+                </div>
+                
+                <div class="flex flex-col gap-5 flex-grow">
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Iced Americano</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">190 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Iced Latte</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">230 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Cold Brew</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">240 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Churchill</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">150 TL</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="category-block flex flex-col h-full p-4 sm:p-5">
+                <div class="border-b-4 border-richBlack pb-3 mb-6">
+                    <h3 class="text-brandRed text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight leading-none">Atıştırmalıklar</h3>
+                </div>
+                
+                <div class="flex flex-col gap-5 flex-grow">
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Kruvasan</span>
+                            <span class="text-[10px] sm:text-xs font-bold opacity-70 mt-1 uppercase tracking-wider">Sade tereyağlı</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">200 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Brownie</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">220 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">San Sebastian</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">280 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Cookie</span>
+                            <span class="text-[10px] sm:text-xs font-bold opacity-70 mt-1 uppercase tracking-wider">Belçika çikolatalı</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">170 TL</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="w-full mt-auto bg-richBlack text-brandBeige border-t-8 border-brandRed">
+        <div class="max-w-7xl mx-auto px-6 sm:px-10 md:px-12 py-12 md:py-16 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+            
+            <div class="font-bold text-sm sm:text-base leading-relaxed tracking-widest uppercase">
+                <p>Bostanlı, 2010. Sk.</p>
+                <p>No:3 D:3E</p>
+                <p>35590 Karşıyaka/İzmir</p>
+            </div>
+
+            <div class="flex flex-col items-center md:items-end gap-6">
+                <div class="flex gap-8">
+                    <a href="https://www.instagram.com/kithbostanli" target="_blank" rel="noopener noreferrer" class="text-brandRed hover:text-richBlack transition-colors text-4xl">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@kith.bostanli" target="_blank" rel="noopener noreferrer" class="text-brandRed hover:text-richBlack transition-colors text-4xl">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+                <div class="text-xs sm:text-sm font-black tracking-widest">
+                    &copy; 2026 kith. bostanlı
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+</body>
+</html>
