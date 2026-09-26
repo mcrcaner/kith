@@ -20,6 +20,15 @@
                     },
                     fontFamily: {
                         termina: ['termina', 'sans-serif'],
+                    },
+                    keyframes: {
+                        snapUp: {
+                            '0%': { transform: 'translateY(15px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    },
+                    animation: {
+                        'snap-up': 'snapUp 0.3s cubic-bezier(0, 0, 0, 1) forwards',
                     }
                 }
             }
@@ -68,25 +77,25 @@
 </head>
 <body class="text-richBlack selection:bg-brandRed selection:text-brandBeige flex flex-col min-h-screen">
 
-    <header class="w-full pt-24 md:pt-32 pb-6 px-6 sm:px-10 md:px-12">
+    <header class="w-full pt-32 sm:pt-40 md:pt-48 pb-6 px-8 sm:px-12 md:px-16 lg:px-24">
         <div class="w-full max-w-7xl mx-auto flex justify-center">
             <div class="flex flex-col items-start">
-                <h1 class="text-brandRed font-black lowercase tracking-normal leading-[0.85] m-0 p-0" style="font-size: clamp(3rem, 26vw, 14rem);">
+                <h1 class="text-brandRed font-black lowercase tracking-normal leading-[0.85] m-0 p-0 opacity-0 animate-snap-up" style="font-size: clamp(6rem, 28vw, 14rem);">
                     kith.
                 </h1>
-                <h2 class="text-brandRed font-bold lowercase tracking-normal mt-0 text-left" style="font-size: clamp(1rem, 5.5vw, 2.75rem);">
+                <h2 class="text-brandRed font-bold lowercase tracking-normal mt-0 text-left opacity-0 animate-snap-up [animation-delay:100ms]" style="font-size: clamp(1.2rem, 5.8vw, 2.75rem);">
                     your daily routine.
                 </h2>
             </div>
         </div>
     </header>
 
-    <main class="w-full max-w-7xl mx-auto px-6 sm:px-10 md:px-12 py-12 flex-grow">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14">
+    <main class="w-full max-w-7xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 py-12 flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-14">
             
-            <section class="category-block flex flex-col h-full p-4 sm:p-5">
+            <section class="category-block flex flex-col h-full p-4 sm:p-5 opacity-0 animate-snap-up [animation-delay:200ms]">
                 <div class="border-b-4 border-richBlack pb-3 mb-6">
-                    <h3 class="text-brandRed text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight leading-none">Sıcak İçecekler</h3>
+                    <h3 class="text-brandRed text-[1.1rem] min-[400px]:text-xl sm:text-3xl lg:text-2xl xl:text-[1.3rem] 2xl:text-2xl font-black uppercase tracking-tight leading-none">Sıcak İçecekler</h3>
                 </div>
                 
                 <div class="flex flex-col gap-5 flex-grow">
@@ -118,9 +127,9 @@
                 </div>
             </section>
 
-            <section class="category-block flex flex-col h-full p-4 sm:p-5">
+            <section class="category-block flex flex-col h-full p-4 sm:p-5 opacity-0 animate-snap-up [animation-delay:300ms]">
                 <div class="border-b-4 border-richBlack pb-3 mb-6">
-                    <h3 class="text-brandRed text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight leading-none">Soğuk İçecekler</h3>
+                    <h3 class="text-brandRed text-[1.1rem] min-[400px]:text-xl sm:text-3xl lg:text-2xl xl:text-[1.3rem] 2xl:text-2xl font-black uppercase tracking-tight leading-none">Soğuk İçecekler</h3>
                 </div>
                 
                 <div class="flex flex-col gap-5 flex-grow">
@@ -147,9 +156,9 @@
                 </div>
             </section>
 
-            <section class="category-block flex flex-col h-full p-4 sm:p-5">
+            <section class="category-block flex flex-col h-full p-4 sm:p-5 opacity-0 animate-snap-up [animation-delay:400ms]">
                 <div class="border-b-4 border-richBlack pb-3 mb-6">
-                    <h3 class="text-brandRed text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight leading-none">Atıştırmalıklar</h3>
+                    <h3 class="text-brandRed text-[1.1rem] min-[400px]:text-xl sm:text-3xl lg:text-2xl xl:text-[1.3rem] 2xl:text-2xl font-black uppercase tracking-tight leading-none">Atıştırmalıklar</h3>
                 </div>
                 
                 <div class="flex flex-col gap-5 flex-grow">
@@ -185,7 +194,7 @@
         </div>
     </main>
 
-    <footer class="w-full mt-auto bg-richBlack text-brandBeige border-t-8 border-brandRed">
+    <footer class="w-full mt-auto bg-richBlack text-brandBeige border-t-8 border-brandRed opacity-0 animate-snap-up [animation-delay:500ms]">
         <div class="max-w-7xl mx-auto px-6 sm:px-10 md:px-12 py-12 md:py-16 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
             
             <div class="font-bold text-sm sm:text-base leading-relaxed tracking-widest uppercase">
