@@ -23,7 +23,7 @@
                     },
                     keyframes: {
                         snapUp: {
-                            '0%': { transform: 'translateY(15px)', opacity: '0' },
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
                             '100%': { transform: 'translateY(0)', opacity: '1' },
                         }
                     },
@@ -44,26 +44,18 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Solid backgrounds for readability over the grid, sharp borders */
-        .solid-block {
-            background-color: #ffe6bb;
-            border: 4px solid #0a0a0a;
-        }
-
         .category-block {
             background-color: #ffe6bb;
         }
 
-        /* Dotted leader for prices */
         .leader {
             border-bottom: 3px dotted #0a0a0a;
             flex-grow: 1;
             margin: 0 12px;
             position: relative;
-            top: -6px; /* Align with baseline */
+            top: -6px;
         }
 
-        /* Hide scrollbar for clean sticky header if needed */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -77,42 +69,39 @@
 </head>
 <body class="text-richBlack selection:bg-brandRed selection:text-brandBeige flex flex-col min-h-screen">
 
-    <header class="w-full pt-32 sm:pt-40 md:pt-48 pb-6 px-8 sm:px-12 md:px-16 lg:px-24">
+    <header class="w-full pt-20 sm:pt-28 md:pt-36 pb-12 px-6 sm:px-12 md:px-16 lg:px-24">
         <div class="w-full max-w-7xl mx-auto flex justify-center">
             <div class="flex flex-col items-start">
-                <h1 class="text-brandRed font-black lowercase tracking-normal leading-[0.85] m-0 p-0 opacity-0 animate-snap-up" style="font-size: clamp(6rem, 28vw, 14rem);">
+                <h1 class="text-brandRed font-black lowercase tracking-normal leading-[0.85] m-0 p-0 opacity-0 animate-snap-up" style="font-size: clamp(6.5rem, 28vw, 14rem);">
                     kith.
                 </h1>
-                <h2 class="text-brandRed font-bold lowercase tracking-normal mt-0 text-left opacity-0 animate-snap-up [animation-delay:100ms]" style="font-size: clamp(1.2rem, 5.8vw, 2.75rem);">
+                <h2 class="text-brandRed font-bold lowercase tracking-normal mt-1 text-left opacity-0 animate-snap-up [animation-delay:100ms]" style="font-size: clamp(1.2rem, 5.2vw, 2.75rem);">
                     your daily routine.
                 </h2>
             </div>
         </div>
     </header>
 
-    <main class="w-full max-w-7xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 py-12 flex-grow">
-        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-14">
+    <main class="w-full max-w-7xl mx-auto px-6 sm:px-12 md:px-16 lg:px-24 py-4 flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14">
             
             <section class="category-block flex flex-col h-full p-4 sm:p-5 opacity-0 animate-snap-up [animation-delay:200ms]">
                 <div class="border-b-4 border-richBlack pb-3 mb-6">
-                    <h3 class="text-brandRed text-[1.1rem] min-[400px]:text-xl sm:text-3xl lg:text-2xl xl:text-[1.3rem] 2xl:text-2xl font-black uppercase tracking-tight leading-none">Sıcak İçecekler</h3>
+                    <h3 class="text-brandRed text-[1.2rem] min-[400px]:text-xl sm:text-3xl lg:text-2xl xl:text-[1.3rem] 2xl:text-2xl font-black uppercase tracking-tight leading-none">Sıcak İçecekler</h3>
                 </div>
                 
                 <div class="flex flex-col gap-5 flex-grow">
+                    <h4 class="text-brandRed font-bold text-sm sm:text-base uppercase tracking-wider mt-2 mb-1">Kahveler</h4>
+                    
                     <div class="flex items-end w-full">
                         <span class="font-bold text-sm sm:text-base leading-tight">Espresso</span>
                         <div class="leader"></div>
-                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">150 TL</span>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">160 TL</span>
                     </div>
                     <div class="flex items-end w-full">
                         <span class="font-bold text-sm sm:text-base leading-tight">Americano</span>
                         <div class="leader"></div>
-                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">180 TL</span>
-                    </div>
-                    <div class="flex items-end w-full">
-                        <span class="font-bold text-sm sm:text-base leading-tight">Flat White</span>
-                        <div class="leader"></div>
-                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">200 TL</span>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">190 TL</span>
                     </div>
                     <div class="flex items-end w-full">
                         <span class="font-bold text-sm sm:text-base leading-tight">Latte</span>
@@ -120,81 +109,582 @@
                         <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">220 TL</span>
                     </div>
                     <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Latte (şurup ilavesi)</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">(Karamel, Fındık, Badem, Vanilya, Coconut, Bal, Antep Fıstığı, Kırmızı Meyveler, Turunç, Frambuaz, Lavanta, Balkabağı, Cookie, Nane ve Misket Limon)</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Cortado</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">220 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Flat White</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">220 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
                         <span class="font-bold text-sm sm:text-base leading-tight">Filtre Kahve</span>
                         <div class="leader"></div>
-                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">170 TL</span>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">200 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">V-60</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Cold Brew</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Mocha</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">White Chocolate Mocha</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Türk Kahvesi</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">140 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Double Kahvesi</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">190 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Damla Sakız Türk Kahvesi</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">150 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Matcha Latte</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Strawberry Matcha Latte</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">280 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Sıcak Çikolata</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">220 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Sahlep</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">190 TL</span>
+                    </div>
+
+                    <h4 class="text-brandRed font-bold text-sm sm:text-base uppercase tracking-wider mt-6 mb-1">Çaylar</h4>
+                    
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Bardak Çay</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">60 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Fincan Çay</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">90 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Soğuk Çaylar</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider">(çeşitler için bize danışabilirsiniz)</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">200 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Chai Tea Latte</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Bitki Çayları</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">(Mandala, Şeftali, Beyaz Çay, Meditasyon, Bahar, Hibiskus, Earl Grey, Detoks Yeşil Çay, Kuşburnu, Böğürtlen, Noel, Yasemin, Yeşil Çay)</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">180 TL</span>
                     </div>
                 </div>
             </section>
 
             <section class="category-block flex flex-col h-full p-4 sm:p-5 opacity-0 animate-snap-up [animation-delay:300ms]">
                 <div class="border-b-4 border-richBlack pb-3 mb-6">
-                    <h3 class="text-brandRed text-[1.1rem] min-[400px]:text-xl sm:text-3xl lg:text-2xl xl:text-[1.3rem] 2xl:text-2xl font-black uppercase tracking-tight leading-none">Soğuk İçecekler</h3>
+                    <h3 class="text-brandRed text-[1.2rem] min-[400px]:text-xl sm:text-3xl lg:text-2xl xl:text-[1.3rem] 2xl:text-2xl font-black uppercase tracking-tight leading-none">Soğuk İçecekler</h3>
                 </div>
                 
                 <div class="flex flex-col gap-5 flex-grow">
+                    <h4 class="text-brandRed font-bold text-sm sm:text-base uppercase tracking-wider mt-2 mb-1">Kahveler</h4>
+                    
                     <div class="flex items-end w-full">
-                        <span class="font-bold text-sm sm:text-base leading-tight">Iced Americano</span>
+                        <span class="font-bold text-sm sm:text-base leading-tight">Ice Americano</span>
                         <div class="leader"></div>
                         <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">190 TL</span>
                     </div>
                     <div class="flex items-end w-full">
-                        <span class="font-bold text-sm sm:text-base leading-tight">Iced Latte</span>
+                        <span class="font-bold text-sm sm:text-base leading-tight">Ice Espresso</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">160 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Ice Flat White</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">220 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Affogato</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Cortado</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">220 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Ice Filtre Kahve</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">200 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Ice Mocha</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">White Chocolate Mocha</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Ice Latte</span>
                         <div class="leader"></div>
                         <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">230 TL</span>
                     </div>
                     <div class="flex items-end w-full">
-                        <span class="font-bold text-sm sm:text-base leading-tight">Cold Brew</span>
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Ice Latte (şurup ilavesi)</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">(Karamel, Fındık, Badem, Vanilya, Coconut, Bal, Antep Fıstığı, Kırmızı Meyveler, Turunç, Frambuaz, Lavanta, Balkabağı, Cookie, Nane ve Misket Limon)</span>
+                        </div>
                         <div class="leader"></div>
-                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">240 TL</span>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">260 TL</span>
+                    </div>
+
+                    <h4 class="text-brandRed font-bold text-sm sm:text-base uppercase tracking-wider mt-6 mb-1">Soğuk İçecek</h4>
+                    
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Milkshake</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Smoothie</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">(Yabanmersini, Bal, Muz, Süt, Ananas, Limon, Yeşil Elma)</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">300 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Frappe</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Sakura</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Limonata</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">200 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Çilekli Limonata</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Sıkma Portakal Suyu</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">180 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Kith Mix</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider">(Günün karışımı için bize sorun)</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">300 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Frutti Extra Mandalina</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">140 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Frutti Extra Yeşil Limon</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">140 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Soğuk Bitki Çayları</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">(Kuşburnu, Böğürtlen, Mandala, Passion Guava, Orange Mango)</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Ice Matcha Latte</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">280 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Ice Strawberry Matcha</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">290 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Ice Chai Tea Latte</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">260 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Soda</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">90 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Gazoz</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">90 TL</span>
                     </div>
                     <div class="flex items-end w-full">
                         <span class="font-bold text-sm sm:text-base leading-tight">Churchill</span>
                         <div class="leader"></div>
                         <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">150 TL</span>
                     </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Su</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">40 TL</span>
+                    </div>
                 </div>
             </section>
 
             <section class="category-block flex flex-col h-full p-4 sm:p-5 opacity-0 animate-snap-up [animation-delay:400ms]">
                 <div class="border-b-4 border-richBlack pb-3 mb-6">
-                    <h3 class="text-brandRed text-[1.1rem] min-[400px]:text-xl sm:text-3xl lg:text-2xl xl:text-[1.3rem] 2xl:text-2xl font-black uppercase tracking-tight leading-none">Atıştırmalıklar</h3>
+                    <h3 class="text-brandRed text-[1.2rem] min-[400px]:text-xl sm:text-3xl lg:text-2xl xl:text-[1.3rem] 2xl:text-2xl font-black uppercase tracking-tight leading-none">Tatlılar</h3>
                 </div>
                 
                 <div class="flex flex-col gap-5 flex-grow">
                     <div class="flex items-end w-full">
                         <div class="flex flex-col pr-2">
-                            <span class="font-bold text-sm sm:text-base leading-tight">Kruvasan</span>
-                            <span class="text-[10px] sm:text-xs font-bold opacity-70 mt-1 uppercase tracking-wider">Sade tereyağlı</span>
+                            <span class="font-bold text-sm sm:text-base leading-tight">Cheesecake</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider">(Bugün neler var bize sorun)</span>
                         </div>
                         <div class="leader"></div>
-                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">200 TL</span>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">300 TL</span>
                     </div>
                     <div class="flex items-end w-full">
                         <span class="font-bold text-sm sm:text-base leading-tight">Brownie</span>
                         <div class="leader"></div>
-                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">220 TL</span>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">300 TL</span>
                     </div>
                     <div class="flex items-end w-full">
-                        <span class="font-bold text-sm sm:text-base leading-tight">San Sebastian</span>
+                        <span class="font-bold text-sm sm:text-base leading-tight">Tiramisu</span>
                         <div class="leader"></div>
-                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">280 TL</span>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">San Sebo</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">350 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Cookie</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">160 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Donut</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">125 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Magnolya</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Supangle</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">200 TL</span>
                     </div>
                     <div class="flex items-end w-full">
                         <div class="flex flex-col pr-2">
-                            <span class="font-bold text-sm sm:text-base leading-tight">Cookie</span>
-                            <span class="text-[10px] sm:text-xs font-bold opacity-70 mt-1 uppercase tracking-wider">Belçika çikolatalı</span>
+                            <span class="font-bold text-sm sm:text-base leading-tight">Mini Pasta</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider">(Bugün neler var bize sorun)</span>
                         </div>
                         <div class="leader"></div>
-                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">170 TL</span>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="category-block flex flex-col h-full p-4 sm:p-5 opacity-0 animate-snap-up [animation-delay:500ms]">
+                <div class="border-b-4 border-richBlack pb-3 mb-6">
+                    <h3 class="text-brandRed text-[1.2rem] min-[400px]:text-xl sm:text-3xl lg:text-2xl xl:text-[1.3rem] 2xl:text-2xl font-black uppercase tracking-tight leading-none">Atıştırmalıklar</h3>
+                </div>
+                
+                <div class="flex flex-col gap-5 flex-grow">
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Tuzlu Kek</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Yeşil Zeytin, Taze Maydanoz, Taze Soğan, Tulum</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">100 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Labneli Çörek</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Tereyağlı Çörek Hamuru, Taze Soğanlı Labne, Çeri Domates, Fırından çıkınca zeytinyağı</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">140 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Mantar & Beşamel Çörek</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Tereyağlı Çörek Hamuru, Beşamel Sos, Mantar, Fırından çıkınca zeytinyağı</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">140 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Siyez Poğaça</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Siyez Unlu, Tereyağlı Hamur, içinde labne dolgusu</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">120 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Sarımsaklı Çörek</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Tereyağlı Çörek Hamuru, içinde Lorlu Peynir dolgusu, Fırından çıkınca sarımsaklı taze maydanozlu tereyağ</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">160 TL</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="category-block flex flex-col h-full p-4 sm:p-5 opacity-0 animate-snap-up [animation-delay:600ms]">
+                <div class="border-b-4 border-richBlack pb-3 mb-6">
+                    <h3 class="text-brandRed text-[1.2rem] min-[400px]:text-xl sm:text-3xl lg:text-2xl xl:text-[1.3rem] 2xl:text-2xl font-black uppercase tracking-tight leading-none">Soğuk Sandviçler</h3>
+                    <p class="text-[10px] sm:text-xs font-bold opacity-70 mt-2 uppercase tracking-wider">Ekşi mayalı ciabatta ekmeği ile birlikte.</p>
+                </div>
+                
+                <div class="flex flex-col gap-5 flex-grow">
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Hindi Fümeli</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Labne, Hindi Füme, Tulum Peyniri, Roka</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">240 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Pesto Soslu</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Pesto Sos, Mozerella, Domates, Roka</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">220 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Dana Fümeli</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Labne, Dana Füme, Domates, Roka</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">260 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Sebzelim</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Zeytin Ezmesi, Köz Sebze, Ceviz, Roka</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">230 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Kruvasan Sandviç</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">300 TL</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="category-block flex flex-col h-full p-4 sm:p-5 opacity-0 animate-snap-up [animation-delay:700ms]">
+                <div class="border-b-4 border-richBlack pb-3 mb-6">
+                    <h3 class="text-brandRed text-[1.2rem] min-[400px]:text-xl sm:text-3xl lg:text-2xl xl:text-[1.3rem] 2xl:text-2xl font-black uppercase tracking-tight leading-none">Ekşi Maya Ekmekler</h3>
+                </div>
+                
+                <div class="flex flex-col gap-5 flex-grow">
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Cevizli Köy Ekmeği</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">180 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Siyez Unlu Ekmek</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">160 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Sade Köy Ekmeği</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">160 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Zeytinli, Kekikli Köy Ekmeği</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">180 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <span class="font-bold text-sm sm:text-base leading-tight">Kuru Domatesli Biberiyeli Köy ekmeği</span>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">180 TL</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="category-block flex flex-col h-full p-4 sm:p-5 opacity-0 animate-snap-up [animation-delay:800ms]">
+                <div class="border-b-4 border-richBlack pb-3 mb-6">
+                    <h3 class="text-brandRed text-[1.2rem] min-[400px]:text-xl sm:text-3xl lg:text-2xl xl:text-[1.3rem] 2xl:text-2xl font-black uppercase tracking-tight leading-none">Kahvaltılar</h3>
+                </div>
+                
+                <div class="flex flex-col gap-5 flex-grow">
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Ekmeküstü No:1 Avokado</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Ekşi Maya Tam Tahıllı Ekmek üstüne Krem Peynir, Parmesan ve Keten Tohumuyla Çırpılmış 2 Adet Yumurta ve Avokado; yanında Dometes, Marul ve Mini Yulaf Kase</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">400 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Ekmeküstü No:2 Kuru Domates</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Ekşi Maya Tam Tahıllı Ekmek üstüne Pesto Sos, Hellim Peyniri ve Keten Tohumu ile Çırpılmış 2 Adet Yumurta ve Kuru Domates; yanında Domates, Marul ve Mini Yulaf Kase</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">380 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Ekmeküstü No:3 Sosisli</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Ekşi Maya Tam Tahıllı Ekmek üstüne Krem Peynir, Keten Tohumu ile Çırpılmış 2 Adet Yumurta, Kasap Sosis ve Cheddar; yanında Domates, Marul ve Mini Yulaf Kase</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">500 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Ekmeküstü No:4</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Ekşi Maya Köy Ekmeği üzerine Krem Peynir, Hindi Füme, 1 Adet Çırpılmış Yumurta</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">350 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Ekmeküstü No:5</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Ekşi Maya Köy Ekmeği üzerine Avakado Sos, Krem Peynir, 1 Adet Çırpılmış Yumurta, Rende Parmesan</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">300 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Yulaf Kase</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Bitkisel Süt ile Yumuşatılmış, Balla veya Pekmezle tatlandırılmış Yulaf, üstüne Keten Tohumu, Mevsim Meyveleri, Gronala Taneleri, Badem, Ceviz</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">300 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Simit Tabağı</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Krem peyniri, Tulum Peyniri, Zeytin, Reçel, Bal, Yumurta (Haşlanmış, Göz ya da Çırpılmış), Domates, Salatalık</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">300 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Kapris Kahvaltı Tabağı</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Caprese Salata (Mozarella ve Domates), Çırpılmış 2 Adet Yumurta, Kuru Domates, Salatalık, Zeytin, Marul, Yanında Mini Yulaf Kase</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">450 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Kruvasanlı Mini Kahvaltı</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">2 Adet Kruvasan, Krem Peyniri, Nutella, Vişne Reçeli, Mevsim Meyveleri ve Zeytinli Salata</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">450 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Pratik Kahvaltı</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">Ekşi Maya Köy Ekmeği üzerine 1 Adet Göz Yumurta, Tereyağ, Tulum Peyniri, Reçel</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">250 TL</span>
+                    </div>
+                    <div class="flex items-end w-full">
+                        <div class="flex flex-col pr-2">
+                            <span class="font-bold text-sm sm:text-base leading-tight">Çılbır</span>
+                            <span class="text-[9px] sm:text-[10px] font-bold opacity-70 mt-1 uppercase tracking-wider leading-relaxed">2 Adet Poşe Yumurta, Sarımsaklı Yoğurt, Kırmızı Yağ, 1 Dilim Ekşi Maya Köy Ekmeği, Keten Tohumu, Maydanoz</span>
+                        </div>
+                        <div class="leader"></div>
+                        <span class="font-bold text-richBlack text-sm sm:text-base whitespace-nowrap">300 TL</span>
                     </div>
                 </div>
             </section>
 
         </div>
+        
+        <div class="mt-14 p-5 sm:p-6 category-block text-xs sm:text-sm leading-relaxed font-bold opacity-0 animate-snap-up [animation-delay:900ms]">
+            <span class="text-brandRed uppercase tracking-wider block mb-2">Alerjen Uyarısı:</span> 
+            <span class="opacity-80">Menümüzdeki ürünler gluten, süt ve süt ürünleri, yumurta ve kuruyemiş (ceviz vb.) içerebilir ya da bu ürünlerle aynı hatta üretilmiştir. Çapraz bulaşma riskinden dolayı hassasiyeti olan misafirlerimizin sipariş verirken ekibimizi bilgilendirmesini rica ederiz.</span>
+        </div>
     </main>
 
-    <footer class="w-full mt-auto bg-richBlack text-brandBeige border-t-8 border-brandRed opacity-0 animate-snap-up [animation-delay:500ms]">
+    <footer class="w-full mt-auto bg-richBlack text-brandBeige border-t-8 border-brandRed opacity-0 animate-snap-up [animation-delay:1000ms]">
         <div class="max-w-7xl mx-auto px-6 sm:px-10 md:px-12 py-12 md:py-16 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
             
             <div class="font-bold text-sm sm:text-base leading-relaxed tracking-widest uppercase">
@@ -205,14 +695,14 @@
 
             <div class="flex flex-col items-center md:items-end gap-6">
                 <div class="flex gap-8">
-                    <a href="https://www.instagram.com/kithbostanli" target="_blank" rel="noopener noreferrer" class="text-brandRed hover:text-richBlack transition-colors text-4xl">
+                    <a href="https://www.instagram.com/kithbostanli" target="_blank" rel="noopener noreferrer" class="text-brandRed hover:text-brandBeige transition-colors text-4xl">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://www.tiktok.com/@kith.bostanli" target="_blank" rel="noopener noreferrer" class="text-brandRed hover:text-richBlack transition-colors text-4xl">
+                    <a href="https://www.tiktok.com/@kith.bostanli" target="_blank" rel="noopener noreferrer" class="text-brandRed hover:text-brandBeige transition-colors text-4xl">
                         <i class="fa-brands fa-tiktok"></i>
                     </a>
                 </div>
-                <div class="text-xs sm:text-sm font-black tracking-widest">
+                <div class="text-xs sm:text-sm font-black tracking-widest lowercase">
                     &copy; 2026 kith. bostanlı
                 </div>
             </div>
